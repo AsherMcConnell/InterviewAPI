@@ -15,7 +15,7 @@ struct OrderView: View {
     
     var body: some View {
         ZStack {
-            
+           orderCard
         }
     }
 }
@@ -24,7 +24,7 @@ struct OrderView: View {
 // MARK: VIEWS
 
 extension OrderView {
-    var some: some View {
+    var orderCard: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25.0)
                 .stroke(lineWidth: 3.0)
