@@ -8,17 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Bindable var vm = OrderData()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ScrollView {
+            VStack {
+                if let results = vm.orders?.results {
+                    ForEach(results, id: \.id) { order in
+                        ZStack {
+                            OrderView(order: order)
+                        }
+                        
+                    }
+                }
+            }
+            .task {
+                await vm.fetchDataFromAPI()
+            }
+            .padding()
         }
-        .padding()
     }
-}
 
+}
 #Preview {
     ContentView()
+}
+
+// MARK: VIEWS
+
+extension ContentView {
+    var orderCard: some View {
+        ZStack {
+            
+        }
+    }
 }
