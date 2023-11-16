@@ -7,22 +7,47 @@
 
 import Foundation
 
-//class OrderData {
-//    
-//    var order
-//    
-//    func getOrders() async {
-//        guard let url = URL(string: "https://dtmad-store.up.railway.app/api/v1/orders") else { return }
-//        do {
-//            let (data, _) = try await URLSession.shared.data(from: url)
-//            if let decodedOrder = try? JSONDecoder().decode(Pokemon.self, from: data)  {
-//                DispatchQueue.main.async {
-//                    self.pokemon = decodedPokemon
-//                }
-//                print("Successfully fetched \(pokemon?.name ?? "Pokemon") from the internet")
-//            }
-//        } catch {
-//            print("Error fetching Pokemon from the internet. ERROR: \(error)")
-//        }
-//    }
-//}
+// MARK: - Welcome
+struct Welcome: Codable {
+    let responseCode, count: Int
+    let errorMessage: String
+    let results: [Resulte]
+
+    enum CodingKeys: String, CodingKey {
+        case responseCode = "response_code"
+        case count
+        case errorMessage = "error_message"
+        case results
+    }
+}
+
+// MARK: - Result
+struct Resulte: Codable {
+    let id: String
+    let items: [Item]
+    let purchaser: Purchaser
+}
+
+// MARK: - Item
+struct Item: Codable, Identifiable {
+    let id, productName: String
+    let cost: Double
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case productName = "product_name"
+        case cost
+    }
+}
+
+// MARK: - Purchaser
+struct Purchaser: Codable {
+    let id, name, address, phoneNumber: String
+    let emailAddress: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, address
+        case phoneNumber = "phone_number"
+        case emailAddress = "email_address"
+    }
+}

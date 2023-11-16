@@ -13,6 +13,7 @@
 		FA7B48852B064F340025FCD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7B48842B064F340025FCD2 /* Preview Assets.xcassets */; };
 		FA7B488C2B065A2D0025FCD2 /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B488B2B065A2D0025FCD2 /* api.swift */; };
 		FA80EE882B0692FA00D65198 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA80EE872B0692FA00D65198 /* OrderView.swift */; };
+		FA80EE8A2B06B2E400D65198 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA80EE892B06B2E400D65198 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		FA7B48842B064F340025FCD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA7B488B2B065A2D0025FCD2 /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 		FA80EE872B0692FA00D65198 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		FA80EE892B06B2E400D65198 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				FA7B487D2B064F330025FCD2 /* InterviewAPIApp.swift */,
 				FA7B487F2B064F330025FCD2 /* ContentView.swift */,
+				FA80EE892B06B2E400D65198 /* Model.swift */,
 				FA80EE872B0692FA00D65198 /* OrderView.swift */,
 				FA7B488B2B065A2D0025FCD2 /* api.swift */,
 				FA7B48812B064F340025FCD2 /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA80EE8A2B06B2E400D65198 /* Model.swift in Sources */,
 				FA7B48802B064F330025FCD2 /* ContentView.swift in Sources */,
 				FA80EE882B0692FA00D65198 /* OrderView.swift in Sources */,
 				FA7B488C2B065A2D0025FCD2 /* api.swift in Sources */,
