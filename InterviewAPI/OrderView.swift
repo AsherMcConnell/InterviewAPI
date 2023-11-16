@@ -15,6 +15,17 @@ struct OrderView: View {
     
     var body: some View {
         ZStack {
+            
+        }
+    }
+}
+
+
+// MARK: VIEWS
+
+extension OrderView {
+    var some: some View {
+        ZStack {
             RoundedRectangle(cornerRadius: 25.0)
                 .stroke(lineWidth: 3.0)
                 .frame(width: 350, height: 300)
@@ -24,7 +35,7 @@ struct OrderView: View {
                     .font(.system(size: 35))
                     .bold()
                     .padding(.top, 15)
-                    
+                
                 Text("****************************************")
                     .bold()
                 Spacer()
@@ -54,15 +65,15 @@ struct OrderView: View {
                             Spacer()
                         }
                         HStack {
-                        Text("Name: \(order.purchaser.name)")
+                            Text("Name: \(order.purchaser.name)")
                                 .font(.subheadline)
-                        Spacer()
+                            Spacer()
                         }
                         HStack {
                             Text("Email Address: \(order.purchaser.emailAddress)")
                                 .font(.subheadline)
                             Spacer()
-
+                            
                         }
                         HStack {
                             Text("Address: \(order.purchaser.address)")
@@ -90,9 +101,15 @@ struct OrderView: View {
             addToTotal()
         }
     }
+}
+
+// MARK: FUNCS
+
+extension OrderView {
     func addToTotal() {
         order.items.forEach({ item in
             totalPrice += item.cost
         })
     }
 }
+
